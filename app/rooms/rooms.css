@@ -1,0 +1,152 @@
+.room-communication h1 {
+  margin-bottom: 25px;
+}
+
+.room-filters {
+  margin-bottom: 25px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.filter-btn {
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.room-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-top: 4px solid #ccc;
+}
+
+.room-card.status-occupied {
+  border-top-color: #3498db;
+}
+
+.room-card.status-vacant {
+  border-top-color: #2ecc71;
+}
+
+.room-card.status-cleaning {
+  border-top-color: #f39c12;
+}
+
+.room-card.status-maintenance {
+  border-top-color: #e74c3c;
+}
+
+.room-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.room-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.room-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.room-status.occupied {
+  background-color: #d4e6f1;
+  color: #2874a6;
+}
+
+.room-status.vacant {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.room-status.cleaning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.room-status.maintenance {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.room-content {
+  padding: 15px;
+  min-height: 80px;
+}
+
+.guest-name {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.stay-dates {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.request-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.room-message {
+  color: #666;
+  font-style: italic;
+}
+
+.room-actions {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.room-btn {
+  flex: 1;
+  padding: 8px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.room-btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}

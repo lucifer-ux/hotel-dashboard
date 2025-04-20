@@ -1,0 +1,66 @@
+.activity-feed {
+  height: 100%;
+}
+
+.activity-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.activity-item {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.room-number {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #777;
+}
+
+.activity-message {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.activity-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.view-all-btn {
+  width: 100%;
+  text-align: center;
+}

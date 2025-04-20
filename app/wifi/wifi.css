@@ -1,0 +1,136 @@
+.wifi-management h1 {
+  margin-bottom: 25px;
+}
+
+.wifi-dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.small-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.status-pill.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-pill.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.icon-btn.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.icon-btn.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.plan-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.plan-badge.basic {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.plan-badge.premium {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.wifi-qr {
+  display: flex;
+  flex-direction: column;
+}
+
+.qr-form {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.generate-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.qr-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.print-btn {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+@media (min-width: 992px) {
+  .wifi-qr {
+    flex-direction: row;
+  }
+
+  .qr-placeholder {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,46 @@
+.status-list {
+  list-style: none;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.status-item:last-child {
+  border-bottom: none;
+}
+
+.status-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-name {
+  font-weight: 500;
+}
+
+.status-uptime {
+  font-size: 12px;
+  color: #777;
+}
+
+.status-indicator {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-indicator.operational {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-indicator.issue {
+  background-color: #f8d7da;
+  color: #721c24;
+}
