@@ -1,3 +1,4 @@
+import { Bell, ListTodo, Sparkle, Utensils, Wrench, Hotel } from "lucide-react"
 import "./requests.css"
 
 export default function PendingRequests() {
@@ -53,17 +54,17 @@ export default function PendingRequests() {
   const getRequestIcon = (type: string) => {
     switch (type) {
       case "housekeeping":
-        return "🧹"
+        return <Sparkle/>
       case "maintenance":
-        return "🔧"
+        return <Wrench/>
       case "amenity":
-        return "🛏️"
+        return <Hotel/>
       case "food":
-        return "🍽️"
+        return <Utensils/>
       case "service":
-        return "🔔"
+        return <Bell/>
       default:
-        return "📝"
+        return <ListTodo/>
     }
   }
 

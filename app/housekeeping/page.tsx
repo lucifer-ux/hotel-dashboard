@@ -1,3 +1,4 @@
+import { ListTodo, Sparkle, Wrench } from "lucide-react"
 import "./housekeeping.css"
 
 export default function HousekeepingAlerts() {
@@ -35,11 +36,11 @@ export default function HousekeepingAlerts() {
   const getAlertIcon = (type: string) => {
     switch (type) {
       case "cleaning":
-        return "🧹"
+        return <Sparkle/>
       case "maintenance":
-        return "🔧"
+        return <Wrench/>
       case "special-request":
-        return "📝"
+        return <ListTodo/>
       default:
         return "⚠️"
     }

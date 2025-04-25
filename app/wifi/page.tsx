@@ -1,4 +1,6 @@
+import { Settings, LayoutDashboard, Pause, Play } from "lucide-react"
 import "./wifi.css"
+import { Clipboard, RefreshCcw, Smartphone } from "lucide-react";
 
 export default function WifiManagement() {
   // In a real app, this would come from an API
@@ -47,12 +49,13 @@ export default function WifiManagement() {
                   <td>{network.bandwidth}</td>
                   <td>
                     <div className="action-buttons">
-                      <button className="icon-btn">📊</button>
-                      <button className="icon-btn">⚙️</button>
+                      <button className="h-2 w-2"><LayoutDashboard/></button>
+                      <button className="h-6 w-6 text-gray-700"
+                      ><Settings className="text-red-500"/></button>
                       {network.status === "active" ? (
-                        <button className="icon-btn danger">⏸️</button>
+                        <button className="h-6 w-6"><Pause/></button>
                       ) : (
-                        <button className="icon-btn success">▶️</button>
+                        <button className="h-6 w-6"><Play/></button>
                       )}
                     </div>
                   </td>
@@ -90,9 +93,9 @@ export default function WifiManagement() {
                   <td>{guest.expires}</td>
                   <td>
                     <div className="action-buttons">
-                      <button className="icon-btn">🔄</button>
-                      <button className="icon-btn">📱</button>
-                      <button className="icon-btn">📋</button>
+                      <button className="h-4 w-4"><RefreshCcw/></button>
+                      <button className="h-4 w-4"><Smartphone/></button>
+                      <button className="h-4 w-4"><Clipboard/></button>
                     </div>
                   </td>
                 </tr>

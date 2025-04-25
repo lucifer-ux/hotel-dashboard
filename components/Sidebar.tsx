@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import "./Sidebar.css"
+import { LayoutDashboard, MessagesSquare, Wifi, Utensils, Sparkles, KeyRound, LockKeyhole,Smartphone, UserRound, BadgeCheck } from 'lucide-react';
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false)
@@ -35,15 +36,13 @@ export default function Sidebar() {
   }, [collapsed])
 
   const menuItems = [
-    { path: "/", label: "Dashboard", icon: "📊" },
-    { path: "/rooms", label: "Room Communication", icon: "🛎️" },
-    { path: "/wifi", label: "Wi-Fi Management", icon: "📶" },
-    { path: "/food", label: "Food & Room Service", icon: "🍽️" },
-    { path: "/housekeeping", label: "Housekeeping", icon: "🧹" },
-    { path: "/billing", label: "Billing & Add-ons", icon: "🧾" },
-    { path: "/access", label: "Access Management", icon: "🔐" },
-    { path: "/analytics", label: "Analytics", icon: "📈" },
-    { path: "/guest-app", label: "Guest Web App", icon: "🌐" },
+    { path: "/", label: "Dashboard", icon: <LayoutDashboard/> },
+    { path: "/rooms", label: "Room Communication", icon: <MessagesSquare/> },
+    { path: "/amenities", label: "Amenities Management", icon: <BadgeCheck/> },
+    { path: "/food", label: "Food & Room Service", icon: <Utensils/> },
+    { path: "/housekeeping", label: "Housekeeping", icon: <Sparkles/> },
+    { path: "/access", label: "Access Management", icon: <KeyRound/> },
+    { path: "/guest-app", label: "Guest Web App", icon: <Smartphone/> },
   ]
 
   return (

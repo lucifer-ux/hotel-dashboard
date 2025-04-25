@@ -1,4 +1,5 @@
 import "./ActivityFeed.css"
+import { ListTodo, MessagesSquare, Wifi, Utensils, Sparkles, KeyRound, LockKeyhole,Smartphone, UserRound, Wrench } from 'lucide-react';
 
 type Activity = {
   id: number
@@ -21,15 +22,15 @@ export default function ActivityFeed() {
   const getActivityIcon = (type: string) => {
     switch (type) {
       case "request":
-        return "📝"
+        return <ListTodo/>
       case "checkin":
-        return "🔑"
+        return <LockKeyhole/>
       case "food":
-        return "🍽️"
+        return <Utensils/>
       case "housekeeping":
-        return "🧹"
+        return <Sparkles/>
       case "maintenance":
-        return "🔧"
+        return <Wrench/>
       default:
         return "📌"
     }

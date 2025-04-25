@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
-export type ChartType = "revenue" | "occupancy" | "averageRate" | "checkIns";
+export type ChartType = "revenue" | "occupancy" | "upsells" | "orderRate";
 
 interface ChartProps {
   chartType: ChartType;
@@ -23,9 +23,9 @@ const ChartModal: React.FC<ChartProps> = ({ chartType }) => {
           return Math.floor(Math.random() * 12000);
         case "occupancy":
           return Math.floor(Math.random() * 90 + 10); // 10% - 100%
-        case "averageRate":
+        case "upsells":
           return Math.floor(Math.random() * 1000);
-        case "checkIns":
+        case "orderRate":
           return Math.floor(Math.random() * 80);
         default:
           return 0;
@@ -43,12 +43,12 @@ const ChartModal: React.FC<ChartProps> = ({ chartType }) => {
         max: 100,
         axisLabel: { formatter: "{value}%" }
       },
-      averageRate: {
+      upsells: {
         min: 0,
         max: 1000,
         axisLabel: { formatter: "${value}" }
       },
-      checkIns: {
+      orderRate: {
         min: 0,
         max: 80,
         axisLabel: { formatter: "{value}" }

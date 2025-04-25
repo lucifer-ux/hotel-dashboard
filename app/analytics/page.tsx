@@ -90,7 +90,7 @@ export default function Analytics() {
             <h2>Key Metrics</h2>
             <div className="metrics-list">
               <div className="metric-item">
-                <div className="metric-label">Average Daily Rate</div>
+                <div className="metric-label">Successful upsells</div>
                 <div className="metric-value">$156</div>
               </div>
               <div className="metric-item">
