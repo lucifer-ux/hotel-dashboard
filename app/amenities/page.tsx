@@ -6,7 +6,7 @@ import "./amenities.css"
 import WifiManagement from "./tabs/WifiManagement"
 import PoolManagement from "./tabs/PoolManagement"
 import GymManagement from "./tabs/GymManagement"
-import OtherAmenities from "./tabs/otherAminities"
+import OtherAmenities from "./tabs/OtherAminities"
 
 export default function AmenitiesManagement() {
   const [activeTab, setActiveTab] = useState("wifi")
