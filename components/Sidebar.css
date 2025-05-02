@@ -36,8 +36,9 @@
   border: none;
   color: var(--light-text);
   cursor: pointer;
-  padding: 5px;
+  padding: 2px;
   font-size: 20px;
+  width: 2.5em;
 }
 
 .sidebar-nav {

@@ -14,6 +14,9 @@ import GuestSection from "@/components/dashboard/GuestSection";
 import EmployeeSection from "@/components/dashboard/EmployeeSection";
 import NotificationSection from "@/components/dashboard/NotificationSection";
 import PendingRequestsSection from "@/components/dashboard/PendingRequestSection";
+import { Plus, Receipt } from "lucide-react";
+import QuickActionPanel from "@/components/QuickActionPanel";
+import SearchBar from "@/components/SearchBar";
 
 type ChartType = "revenue" | "occupancy" | "upsells" | "orderRate";
 
@@ -54,9 +57,23 @@ export default function Dashboard() {
     setPendingRequestsListVisible(!pendingRequestsListVisible);
   };
 
+  const handleGlobalSearch = (query: string, filters: Record<string, string>) => {
+    console.log("Global search:", query, "with filters:", filters)
+  }
+
   return (
     <div className="dashboard">
-      <h1>Hotel Dashboard</h1>
+      <div className="dashboard-actions">
+        <h1>Hotel Dashboard</h1>
+        <SearchBar
+            placeholder="Search guests, rooms, or bookings..."
+            showFilters={true}
+            onSearch={handleGlobalSearch}
+            className="global-search"
+          />
+        <QuickActionPanel />
+      </div>
+      
 
       <div className="dashboard-summary">
         <StatusCard
