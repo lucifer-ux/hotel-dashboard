@@ -5,6 +5,7 @@ import { UserPlus, UtensilsCrossed, Palmtree, Home, LogOut, X } from "lucide-rea
 import ImageUploader from "./ImageUploader"
 import SearchBar from "./SearchBar"
 import "./QuickActionPanel.css"
+import BookingCalendar from "./ui/CalenderPicker"
 
 type ActionType = "check-in" | "menu-item" | "amenity" | "assign-room" | "checkout" | null
 
@@ -88,6 +89,7 @@ export default function QuickActionPanel() {
                     <label>Reservation ID</label>
                     <input type="text" className="form-control" placeholder="Enter reservation ID" />
                   </div>
+                  <BookingCalendar/>
                   <div className="form-row">
                     <div className="form-group">
                       <label>Room Type</label>

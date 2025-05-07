@@ -14,9 +14,11 @@ import GuestSection from "@/components/dashboard/GuestSection";
 import EmployeeSection from "@/components/dashboard/EmployeeSection";
 import NotificationSection from "@/components/dashboard/NotificationSection";
 import PendingRequestsSection from "@/components/dashboard/PendingRequestSection";
-import { Plus, Receipt } from "lucide-react";
+import { Upload } from "lucide-react";
 import QuickActionPanel from "@/components/QuickActionPanel";
 import SearchBar from "@/components/SearchBar";
+import BulkUploadPopup from "@/components/BulkUploadPopUp";
+
 
 type ChartType = "revenue" | "occupancy" | "upsells" | "orderRate";
 
@@ -30,14 +32,16 @@ export default function Dashboard() {
     useState<Boolean>(false);
   const [pendingRequestsListVisible, setPendingRequestsListVisible] =
     useState<Boolean>(false);
-
+  const [showBulkUpload, setShowBulkUpload] = useState(false) 
   const handleTotalGuestsClick = () => {
     setGuestListVisible(!guestListVisible);
     setEmployeeListVisible(false);
     setNotificationListVisible(false);
     setPendingRequestsListVisible(false);
   };
-
+  const toggleBulkUpload = () => {
+    setShowBulkUpload(!showBulkUpload)
+  }
   const handleEmployeeListClick = () => {
     setGuestListVisible(false);
     setEmployeeListVisible(!employeeListVisible);
@@ -71,6 +75,11 @@ export default function Dashboard() {
             onSearch={handleGlobalSearch}
             className="global-search"
           />
+        <button className="bulk-upload-btn"
+        onClick={toggleBulkUpload}>
+          <Upload size={16}/>
+          <span>Bulk Upload</span>
+        </button>
         <QuickActionPanel />
       </div>
       
@@ -176,6 +185,7 @@ export default function Dashboard() {
           <SystemStatus />
         </div>
       </div>
+      {showBulkUpload && <BulkUploadPopup onClose={toggleBulkUpload} />}
     </div>
   );
 }

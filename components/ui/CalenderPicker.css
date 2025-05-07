@@ -1,0 +1,34 @@
+/* components/BookingCalendar.css */
+
+.calendar-wrapper {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .calendar-wrapper h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .calendar-footer {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  /* Optional: Customize calendar color theme */
+  :root {
+    --rdp-accent-color: #ff385c;
+    --rdp-accent-color-dark: #e71e4d;
+    --rdp-background-color: #f8f8f8;
+    --rdp-cell-size: 40px;
+    --rdp-caption-font-size: 1.1rem;
+  }
+  

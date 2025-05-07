@@ -85,3 +85,25 @@
     margin-left: -5px;
   }
 }
+
+.bulk-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 40px;
+}
+
+.bulk-upload-btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

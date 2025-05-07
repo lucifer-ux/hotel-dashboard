@@ -1,0 +1,222 @@
+.bulk-upload-popup {
+    width: 600px;
+    max-width: 90%;
+    max-height: 90vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.2s ease-out;
+    overflow-y: auto;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eaedf0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+  }
+  
+  .popup-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #2c3e50;
+  }
+  
+  .close-popup {
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  
+  .close-popup:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+  .popup-content {
+    padding: 20px;
+  }
+  
+  .label-with-help {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .help-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #6c757d;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .help-button:hover {
+    color: var(--primary-color);
+  }
+  
+  .help-text {
+    font-size: 12px;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--primary-color);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .counter-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .counter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .counter-btn:first-child {
+    border-radius: 6px 0 0 6px;
+  }
+  
+  .counter-btn:last-child {
+    border-radius: 0 6px 6px 0;
+  }
+  
+  .counter-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+  }
+  
+  .counter-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .counter-input .form-control {
+    border-radius: 0;
+    text-align: center;
+    width: 60px;
+    padding: 8px 0;
+    border-left: none;
+    border-right: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+  }
+  
+  .template-links {
+    margin-top: 5px;
+  }
+  
+  .template-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .template-link:hover {
+    text-decoration: underline;
+  }
+  
+  .bulk-upload-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .secondary-btn {
+    padding: 10px 16px;
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #e9ecef;
+  }
+  
+  .action-submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .action-submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 576px) {
+    .bulk-upload-actions {
+      flex-direction: column;
+    }
+  
+    .secondary-btn,
+    .action-submit-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
